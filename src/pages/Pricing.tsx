@@ -317,7 +317,7 @@ const PricingPage = () => {
               </Heading>
               <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
                 <div className="bg-card border border-border rounded-lg p-6">
-                  <div className="text-4xl font-bold text-accent mb-2">60%</div>
+                  <div className="text-4xl font-bold text-accent mb-2">более 50%</div>
                   <p className="text-sm text-muted-foreground">
                     участников сдают экзамен с первого раза
                   </p>

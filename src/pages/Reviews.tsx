@@ -28,7 +28,7 @@ const Reviews = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead
         title="Отзывы участников групп подготовки к экзамену в Минюсте | 103 юриста"
-        description="Реальные отзывы 103 участников групп подготовки к аттестационному экзамену в Минюсте. 60% сдают с первого раза. Читайте отзывы юристов о программе и методике."
+        description="Реальные отзывы 103 участников групп подготовки к аттестационному экзамену в Минюсте. Более 50% сдают с первого раза. Читайте отзывы юристов о программе и методике."
         url={`${SITE_URL}/reviews`}
         image={`${SITE_URL}/sections/testimonials.png`}
       />
@@ -68,7 +68,7 @@ const Reviews = () => {
                 </p>
               </div>
               <div className="bg-card border border-border rounded-lg p-6 text-center">
-                <div className="text-4xl font-bold text-accent mb-2">60%</div>
+                <div className="text-4xl font-bold text-accent mb-2">более 50%</div>
                 <p className="text-sm text-muted-foreground">
                   сдают экзамен с первого раза
                 </p>
@@ -137,7 +137,7 @@ const Reviews = () => {
                   Результаты говорят сами за себя
                 </h3>
                 <p className="text-muted-foreground">
-                  60% участников, ходивших на экзамен, сдают с первого раза — это в 2–3 раза выше
+                  Более 50% участников, ходивших на экзамен, сдают с первого раза — это в 2–3 раза выше
                   средней результативности в 20–30%.
                 </p>
               </div>

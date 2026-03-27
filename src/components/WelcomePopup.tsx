@@ -106,8 +106,7 @@ export default function WelcomePopup({ onClose }: WelcomePopupProps) {
             19-я группа стартует в марте 2026
           </p>
           <p className="text-sm text-muted-foreground">
-            Сейчас я заканчиваю работу с двумя группами, набранными в январе.
-            Присоединяйтесь к 19-й группе — количество мест ограничено!
+            В группе осталось 2 места. Стартуем сразу, как только вы к нам присоединитесь!
           </p>
         </div>
         <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:justify-end">
