@@ -63,10 +63,12 @@ const LandingAccordion = ({ items }: LandingAccordionProps) => {
           </button>
           <div
             className={`overflow-hidden transition-all duration-200 ${
-              openIndex === i ? "max-h-96 pb-5" : "max-h-0"
+              openIndex === i ? "max-h-[8000px] pb-5" : "max-h-0"
             }`}
           >
-            <p className="text-muted-foreground leading-relaxed">{linkifyText(item.answer)}</p>
+            <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
+              {linkifyText(item.answer)}
+            </p>
           </div>
         </div>
       ))}

@@ -145,7 +145,7 @@ const Reviews = () => {
 
             <div className="text-center bg-accent/5 border border-accent/20 rounded-lg p-8">
               <Heading as="h3" className="mb-4">
-                Присоединяйтесь к 19-й группе!
+                Присоединяйтесь к юбилейной, 20-й группе!
               </Heading>
               <Text className="mb-6">
                 Станьте частью успешного сообщества юристов, которые готовятся к

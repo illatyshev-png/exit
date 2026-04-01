@@ -211,8 +211,8 @@ const Author = () => {
                 Готовы начать подготовку?
               </Heading>
               <Text className="mb-6">
-                Присоединяйтесь к 19-й группе подготовки к экзамену в Минюсте.
-                Стартуем в марте 2026.
+                Принимаю заявки в юбилейную, 20-ю, группу подготовки к экзамену в Минюсте.
+                Стартуем в мае 2026.
               </Text>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <LandingButton variant="accent" size="lg" href="/pricing">
