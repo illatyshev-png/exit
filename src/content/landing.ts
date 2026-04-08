@@ -27,6 +27,8 @@ export const heroContent = {
     "Аттестация в Минюсте — это не просто тест. Три сотни тем, десятки билетов, формулировки «в духе Минюста» и часто ощущение полной растерянности на устном экзамене. Участие в группе подготовки поможет вам пройти этот путь быстро, уверенно и результативно.",
   ctaText: "Присоединиться к группе",
   ctaHref: "#pricing",
+  imageSrc: "/sections/hero-groups-collage.png",
+  imageAlt: "Коллаж участников групп подготовки к экзамену в Минюсте",
 };
 
 export const statsContent = {
@@ -213,6 +215,8 @@ export const testimonialsContent = {
     "/testimonials/КУРС_подготовка_8_1.jpg",
     "/testimonials/КУРС_подготовка_9_1.jpg",
     "/testimonials/КУРС_подготовка_10_1.jpg",
+    "/testimonials/КУРС_подготовка_11.jpg",
+    "/testimonials/КУРС_подготовка_12.jpg",
   ],
   autoScrollInterval: 3000,
 };
