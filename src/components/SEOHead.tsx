@@ -15,7 +15,7 @@ interface SEOHeadProps {
 const SEOHead = ({
   title = "Подготовка к экзамену в Минюсте | более 50% сдают с 1 раза",
   description = "Группа подготовки к аттестационному экзамену в Минюсте. Более 50% участников сдают с первого раза. 8 недель, 5–6 человек, отработанная методика.",
-  image = "https://exam.ilat.info/sections/details.png",
+  image = "https://exam.ilat.info/sections/hero-groups-collage.png",
   url = "https://exam.ilat.info/",
   type = "website",
 }: SEOHeadProps) => {

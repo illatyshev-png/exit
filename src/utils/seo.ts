@@ -21,7 +21,7 @@ export const pageMetas: Record<string, PageMeta> = {
       "Группа подготовки к аттестационному экзамену в Минюсте. Более 50% участников сдают с первого раза. 8 недель, 5–6 человек, отработанная методика.",
     keywords:
       "курс подготовки юристов к экзамену в Минюсте, подготовка к экзамену минюст, аттестационный экзамен, группа подготовки юристов, экзамен министерство юстиции беларусь",
-    ogImage: `${SITE_URL}/sections/details.png`,
+    ogImage: `${SITE_URL}/sections/hero-groups-collage.png`,
     canonical: SITE_URL,
     type: "website",
   },
@@ -88,7 +88,7 @@ export const pageMetas: Record<string, PageMeta> = {
     title: "404 - Страница не найдена | Подготовка к экзамену в Минюсте",
     description:
       "Запрашиваемая страница не найдена. Вернитесь на главную страницу или перейдите к разделам о программе подготовки к экзамену в Минюсте.",
-    ogImage: `${SITE_URL}/sections/details.png`,
+    ogImage: `${SITE_URL}/sections/hero-groups-collage.png`,
     canonical: SITE_URL,
     type: "website",
   },
@@ -133,7 +133,11 @@ export const updatePageMeta = (meta: PageMeta) => {
   if (ogDescription) ogDescription.setAttribute("content", meta.description);
 
   const ogImage = document.querySelector('meta[property="og:image"]');
-  if (ogImage) ogImage.setAttribute("content", meta.ogImage || `${SITE_URL}/sections/details.png`);
+  if (ogImage)
+    ogImage.setAttribute(
+      "content",
+      meta.ogImage || `${SITE_URL}/sections/hero-groups-collage.png`
+    );
 
   const ogUrl = document.querySelector('meta[property="og:url"]');
   if (ogUrl) ogUrl.setAttribute("content", meta.canonical || SITE_URL);
@@ -149,7 +153,11 @@ export const updatePageMeta = (meta: PageMeta) => {
   if (twitterDescription) twitterDescription.setAttribute("content", meta.description);
 
   const twitterImage = document.querySelector('meta[name="twitter:image"]');
-  if (twitterImage) twitterImage.setAttribute("content", meta.ogImage || `${SITE_URL}/sections/details.png`);
+  if (twitterImage)
+    twitterImage.setAttribute(
+      "content",
+      meta.ogImage || `${SITE_URL}/sections/hero-groups-collage.png`
+    );
 
   const twitterUrl = document.querySelector('meta[name="twitter:url"]');
   if (twitterUrl) twitterUrl.setAttribute("content", meta.canonical || SITE_URL);
