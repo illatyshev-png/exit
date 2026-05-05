@@ -11,6 +11,7 @@ import Reviews from "./pages/Reviews";
 import Author from "./pages/Author";
 import NotFound from "./pages/NotFound";
 import YandexMetrika from "./components/YandexMetrika";
+import FacebookPixel from "./components/FacebookPixel";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <YandexMetrika />
+        <FacebookPixel />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
