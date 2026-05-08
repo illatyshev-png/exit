@@ -212,7 +212,7 @@ const Author = () => {
               </Heading>
               <Text className="mb-6">
                 Принимаю заявки в юбилейную, 20-ю, группу подготовки к экзамену в Минюсте.
-                Стартуем в мае 2026. Осталось 3 места.
+                Стартуем в мае 2026. Осталось 2 места.
               </Text>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <LandingButton variant="accent" size="lg" href="/pricing">
