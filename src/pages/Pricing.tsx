@@ -323,13 +323,13 @@ const PricingPage = () => {
                   </p>
                 </div>
                 <div className="bg-card border border-border rounded-lg p-6">
-                  <div className="text-4xl font-bold text-accent mb-2">103</div>
+                  <div className="text-4xl font-bold text-accent mb-2">109</div>
                   <p className="text-sm text-muted-foreground">
                     юриста уже подготовились в наших группах
                   </p>
                 </div>
                 <div className="bg-card border border-border rounded-lg p-6">
-                  <div className="text-4xl font-bold text-accent mb-2">18</div>
+                  <div className="text-4xl font-bold text-accent mb-2">19</div>
                   <p className="text-sm text-muted-foreground">
                     групп успешно завершили программу
                   </p>
@@ -340,7 +340,7 @@ const PricingPage = () => {
             {/* CTA */}
             <div className="text-center bg-accent/5 border border-accent/20 rounded-lg p-8">
               <Heading as="h3" className="mb-4">
-                Готовы присоединиться к юбилейной, 20-й группе подготовки юристов?
+                Готовы присоединиться к 21-й группе подготовки юристов?
               </Heading>
               <Text className="mb-6">
                 Количество мест ограничено. Не упустите возможность подготовиться

@@ -27,8 +27,8 @@ const Reviews = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead
-        title="Отзывы участников групп подготовки к экзамену в Минюсте | 103 юриста"
-        description="Реальные отзывы 103 участников групп подготовки к аттестационному экзамену в Минюсте. Более 50% сдают с первого раза. Читайте отзывы юристов о программе и методике."
+        title="Отзывы участников групп подготовки к экзамену в Минюсте | 109 юристов"
+        description="Реальные отзывы 109 участников групп подготовки к аттестационному экзамену в Минюсте. Более 50% сдают с первого раза. Читайте отзывы юристов о программе и методике."
         url={`${SITE_URL}/reviews`}
         image={`${SITE_URL}/sections/testimonials.png`}
       />
@@ -55,16 +55,16 @@ const Reviews = () => {
             </Heading>
 
             <Text variant="lead" className="mb-12 text-center max-w-3xl mx-auto">
-              За 4 года работы через мои группы прошли 103 юриста. Вот что они
+              За 4 года работы через мои группы прошли 109 юристов. Вот что они
               говорят о программе подготовки к аттестационному экзамену.
             </Text>
 
             {/* Статистика */}
             <div className="grid sm:grid-cols-3 gap-6 mb-16">
               <div className="bg-card border border-border rounded-lg p-6 text-center">
-                <div className="text-4xl font-bold text-accent mb-2">103</div>
+                <div className="text-4xl font-bold text-accent mb-2">109</div>
                 <p className="text-sm text-muted-foreground">
-                  участника прошли подготовку
+                  участников прошли подготовку
                 </p>
               </div>
               <div className="bg-card border border-border rounded-lg p-6 text-center">
@@ -74,7 +74,7 @@ const Reviews = () => {
                 </p>
               </div>
               <div className="bg-card border border-border rounded-lg p-6 text-center">
-                <div className="text-4xl font-bold text-accent mb-2">18</div>
+                <div className="text-4xl font-bold text-accent mb-2">19</div>
                 <p className="text-sm text-muted-foreground">
                   групп успешно завершили программу
                 </p>
@@ -127,7 +127,7 @@ const Reviews = () => {
                   Экспертиза автора
                 </h3>
                 <p className="text-muted-foreground">
-                  Илья Латышев - юрист с 2001 года, бизнес-коуч ICU, автор 270+
+                  Илья Латышев - юрист с 2001 года, бизнес-коуч ICU, автор 300+
                   статей. С 2022 года ведет группы подготовки к экзамену в Минюсте.
                 </p>
               </div>
@@ -145,7 +145,7 @@ const Reviews = () => {
 
             <div className="text-center bg-accent/5 border border-accent/20 rounded-lg p-8">
               <Heading as="h3" className="mb-4">
-                Присоединяйтесь к юбилейной, 20-й группе!
+                Присоединяйтесь к 21-й группе!
               </Heading>
               <Text className="mb-6">
                 Станьте частью успешного сообщества юристов, которые готовятся к

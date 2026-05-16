@@ -103,10 +103,7 @@ export default function WelcomePopup({ onClose }: WelcomePopupProps) {
             Актуально
           </h2>
           <p className="font-medium text-foreground">
-            Принимаю заявки в юбилейную, 20-ю, группу.
-          </p>
-          <p className="text-sm text-muted-foreground">
-            Стартуем в мае 2026. Осталось 2 места.
+            Принимаю заявки в 21-ю группу. Время старта пока уточняется.
           </p>
         </div>
         <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:justify-end">

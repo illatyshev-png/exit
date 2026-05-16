@@ -44,12 +44,12 @@ const StructuredData = () => {
       currency: "BYN",
       rating: {
         value: "4.8",
-        count: "103",
+        count: "109",
       },
       instructor: {
         name: "Илья Латышев",
         description:
-          "Юрист с 2001 года, бизнес-коуч ICU, автор 270+ статей и курсов",
+          "Юрист с 2001 года, бизнес-коуч ICU, автор 300+ статей и курсов",
       },
     });
 
@@ -58,7 +58,7 @@ const StructuredData = () => {
 
     // WebSite Schema
     const websiteSchema = getWebSiteSchema({
-      name: "Подготовка к экзамену в Минюсте",
+      name: "Группа подготовки к экзамену в Минюсте",
       url: SITE_URL,
       description:
         "Группа подготовки к аттестационному экзамену в Минюсте. Более 50% участников сдают с первого раза.",

@@ -27,7 +27,7 @@ const Author = () => {
     <div className="min-h-screen flex flex-col">
       <SEOHead
         title="Об авторе - Илья Латышев | Юрист, бизнес-коуч, автор программы"
-        description="Илья Латышев - юрист с 2001 года, бизнес-коуч ICU, автор 270+ статей. С 2022 года веду группы подготовки к аттестационному экзамену в Минюсте. Более 50% участников сдают с первого раза."
+        description="Илья Латышев - юрист с 2001 года, бизнес-коуч ICU, автор 300+ статей. С 2022 года веду группы подготовки к аттестационному экзамену в Минюсте. Более 50% участников сдают с первого раза."
         url={`${SITE_URL}/author`}
         image={`${SITE_URL}/author.jpg`}
       />
@@ -169,21 +169,21 @@ const Author = () => {
                 </div>
 
                 <div className="bg-muted border border-border rounded-lg p-6 text-center">
-                  <div className="text-3xl font-bold text-accent mb-2">18</div>
+                  <div className="text-3xl font-bold text-accent mb-2">19</div>
                   <p className="text-sm text-muted-foreground">
                     групп успешно завершили программу подготовки
                   </p>
                 </div>
 
                 <div className="bg-muted border border-border rounded-lg p-6 text-center">
-                  <div className="text-3xl font-bold text-accent mb-2">103</div>
+                  <div className="text-3xl font-bold text-accent mb-2">109</div>
                   <p className="text-sm text-muted-foreground">
                     юриста подготовились к аттестационному экзамену
                   </p>
                 </div>
 
                 <div className="bg-muted border border-border rounded-lg p-6 text-center">
-                  <div className="text-3xl font-bold text-accent mb-2">270+</div>
+                  <div className="text-3xl font-bold text-accent mb-2">300+</div>
                   <p className="text-sm text-muted-foreground">
                     статей юридической тематики написано
                   </p>
@@ -197,9 +197,9 @@ const Author = () => {
                 </div>
 
                 <div className="bg-muted border border-border rounded-lg p-6 text-center">
-                  <div className="text-3xl font-bold text-accent mb-2">100+</div>
+                  <div className="text-3xl font-bold text-accent mb-2">430+</div>
                   <p className="text-sm text-muted-foreground">
-                    юридических семинаров проведено
+                    человек стали с договорами на ты на моем онлайн-курсе
                   </p>
                 </div>
               </div>
@@ -211,8 +211,7 @@ const Author = () => {
                 Готовы начать подготовку?
               </Heading>
               <Text className="mb-6">
-                Принимаю заявки в юбилейную, 20-ю, группу подготовки к экзамену в Минюсте.
-                Стартуем в мае 2026. Осталось 2 места.
+                Принимаю заявки в 21-ю группу. Время старта пока уточняется.
               </Text>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <LandingButton variant="accent" size="lg" href="/pricing">

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const NotFound = () => {
   useEffect(() => {
-    document.title = "404 - Страница не найдена | Подготовка к экзамену в Минюсте";
+    document.title = "404 - Страница не найдена | Группа подготовки к экзамену в Минюсте";
     
     const metaRobots = document.querySelector('meta[name="robots"]');
     if (metaRobots) {
