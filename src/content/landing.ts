@@ -83,7 +83,7 @@ export const comparisonContent = {
 export const solutionContent = {
   headline: "Что получает каждый участник группы подготовки к экзамену в Минюсте",
   description:
-    "Принимаю заявки в 21-ю группу. Время старта пока уточняется.",
+    "Принимаю заявки в 21-ю группу. Осталось 2 места. Стартуем в конце мая-начале июня.",
   benefits: [
     {
       title: "Сильная мотивация",
@@ -197,7 +197,7 @@ export const detailsContent = {
   ctaHref: "#pricing",
   bonus: {
     title: "Принимаю заявки в 21-ю группу.",
-    description: "Время старта пока уточняется.",
+    description: "Осталось 2 места. Стартуем в конце мая-начале июня.",
   },
 };
 
@@ -391,7 +391,7 @@ export const faqContent = {
   ],
   finalCta: {
     headline: "Принимаю заявки в 21-ю группу.",
-    description: "Время старта пока уточняется.",
+    description: "Осталось 2 места. Стартуем в конце мая-начале июня.",
     ctaText: "Присоединиться к группе",
     ctaHref: "#pricing",
   },

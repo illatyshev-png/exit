@@ -211,7 +211,7 @@ const Author = () => {
                 Готовы начать подготовку?
               </Heading>
               <Text className="mb-6">
-                Принимаю заявки в 21-ю группу. Время старта пока уточняется.
+                Принимаю заявки в 21-ю группу. Осталось 2 места. Стартуем в конце мая-начале июня.
               </Text>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <LandingButton variant="accent" size="lg" href="/pricing">
