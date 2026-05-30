@@ -25,12 +25,16 @@ jobs:
       - name: Install Chromium for react-snap
         run: |
           sudo apt-get update
-          sudo apt-get install -y chromium
+          sudo apt-get install -y chromium-browser || sudo apt-get install -y chromium
         env:
           DEBIAN_FRONTEND: noninteractive
 
       - name: Build
-        run: npm run build
+        run: |
+          CHROMIUM=$(command -v chromium-browser || command -v chromium || command -v google-chrome)
+          echo "Using Chromium at: $CHROMIUM"
+          npm pkg set "reactSnap.puppeteerExecutablePath=$CHROMIUM"
+          npm run build
         env:
           PUPPETEER_EXECUTABLE_PATH: /usr/bin/chromium
 

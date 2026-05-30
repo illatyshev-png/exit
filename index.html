@@ -34,7 +34,7 @@
     <meta name="apple-mobile-web-app-title" content="Экзамен Минюст" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <link rel="author" href="/humans.txt" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://mc.yandex.ru https://www.googletagmanager.com https://connect.facebook.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://exam.ilat.info https://exam2.ilat.info https://mc.yandex.ru https://www.ilat.info https://www.google-analytics.com https://www.googletagmanager.com https://www.facebook.com; connect-src 'self' https://mc.yandex.ru https://*.yandex.ru https://*.yandex.net https://api.bepaid.by https://dogovor.by https://exam.ilat.info https://exam2.ilat.info https://www.google-analytics.com https://www.googletagmanager.com https://www.facebook.com; font-src 'self'; frame-src https://api.bepaid.by https://dogovor.by;" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://mc.yandex.ru https://yastatic.net https://www.googletagmanager.com https://connect.facebook.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://exam.ilat.info https://exam2.ilat.info https://mc.yandex.ru https://www.ilat.info https://www.google-analytics.com https://www.googletagmanager.com https://www.facebook.com; connect-src 'self' https://mc.yandex.ru https://*.yandex.ru https://*.yandex.net https://api.bepaid.by https://dogovor.by https://exam.ilat.info https://exam2.ilat.info https://www.google-analytics.com https://www.googletagmanager.com https://www.facebook.com; font-src 'self'; frame-src blob: https://mc.yandex.ru https://mc.webvisor.com https://api.bepaid.by https://dogovor.by; child-src blob: https://mc.yandex.ru; frame-ancestors 'self' https://metrika.yandex.ru https://metrika.yandex.by https://metrika.yandex.com https://metrica.yandex.ru https://metrica.yandex.by https://metrica.yandex.com https://webvisor.com https://*.webvisor.com https://mc.yandex.ru;" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -73,7 +73,15 @@
           k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
       })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107051380', 'ym');
 
-      ym(107051380, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+      ym(107051380, 'init', {
+          defer: true,
+          ssr: true,
+          webvisor: true,
+          clickmap: true,
+          ecommerce: "dataLayer",
+          accurateTrackBounce: true,
+          trackLinks: true,
+      });
     </script>
     <!-- /Yandex.Metrika counter -->
 
