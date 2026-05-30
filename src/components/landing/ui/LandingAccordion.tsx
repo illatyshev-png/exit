@@ -1,5 +1,6 @@
 import { useState, type ReactNode } from "react";
 import { getExternalLinkRel } from "@/utils/linkRel";
+import { isSafeAnchorHref } from "@/utils/safeUrl";
 
 function linkifyText(text: string): ReactNode {
   const pattern =
@@ -12,11 +13,50 @@ function linkifyText(text: string): ReactNode {
     if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
 
     if (match[1]) {
-      parts.push(<a key={match.index} href={match[2]} target="_blank" rel={getExternalLinkRel(match[2])} className="text-accent hover:underline">{match[1]}</a>);
+      const mdUrl = match[2];
+      if (isSafeAnchorHref(mdUrl)) {
+        parts.push(
+          <a
+            key={match.index}
+            href={mdUrl}
+            target="_blank"
+            rel={getExternalLinkRel(mdUrl)}
+            className="text-accent hover:underline"
+          >
+            {match[1]}
+          </a>,
+        );
+      } else {
+        parts.push(match[0]);
+      }
     } else if (match[3]) {
-      parts.push(<a key={match.index} href={match[3]} target="_blank" rel={getExternalLinkRel(match[3])} className="text-accent hover:underline">{match[3]}</a>);
+      const bareUrl = match[3];
+      if (isSafeAnchorHref(bareUrl)) {
+        parts.push(
+          <a
+            key={match.index}
+            href={bareUrl}
+            target="_blank"
+            rel={getExternalLinkRel(bareUrl)}
+            className="text-accent hover:underline"
+          >
+            {bareUrl}
+          </a>,
+        );
+      } else {
+        parts.push(bareUrl);
+      }
     } else if (match[4]) {
-      parts.push(<a key={match.index} href={`mailto:${match[4]}`} rel="nofollow" className="text-accent hover:underline">{match[4]}</a>);
+      const mailHref = `mailto:${match[4]}`;
+      if (isSafeAnchorHref(mailHref)) {
+        parts.push(
+          <a key={match.index} href={mailHref} rel="nofollow noopener noreferrer" className="text-accent hover:underline">
+            {match[4]}
+          </a>,
+        );
+      } else {
+        parts.push(match[4]);
+      }
     }
 
     lastIndex = match.index + match[0].length;

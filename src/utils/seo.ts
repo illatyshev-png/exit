@@ -16,12 +16,12 @@ export interface PageMeta {
 
 export const pageMetas: Record<string, PageMeta> = {
   home: {
-    title: "Группа подготовки к экзамену в Минюсте | более 50% сдают с 1 раза",
+    title: "EXIT — план побега из найма в свой бизнес",
     description:
-      "Группа подготовки к аттестационному экзамену в Минюсте. Более 50% участников сдают с первого раза. 8 недель, 5–6 человек, отработанная методика.",
+      "Книга Ильи Латышева о том, как выйти из найма в свой бизнес и вырасти в чеке. 19 лет опыта, 130 страниц конкретики, 8 минут аудио-концентрата.",
     keywords:
-      "курс подготовки юристов к экзамену в Минюсте, подготовка к экзамену минюст, аттестационный экзамен, группа подготовки юристов, экзамен министерство юстиции беларусь",
-    ogImage: `${SITE_URL}/sections/hero-groups-collage.png`,
+      "EXIT, уйти из найма, свой бизнес, юрист предприниматель, план побега из найма, книга EXIT, Илья Латышев",
+    ogImage: `${SITE_URL}/images/book-mockup.png`,
     canonical: SITE_URL,
     type: "website",
   },
@@ -51,9 +51,9 @@ export const pageMetas: Record<string, PageMeta> = {
 
   reviews: {
     title:
-      "Отзывы участников групп подготовки к экзамену в Минюсте | 109 юристов",
+      "Отзывы участников групп подготовки к экзамену в Минюсте | 103 юриста",
     description:
-      "Реальные отзывы 109 участников групп подготовки к аттестационному экзамену в Минюсте. Более 50% сдают с первого раза. Читайте отзывы юристов о программе и методике.",
+      "Реальные отзывы 103 участников групп подготовки к аттестационному экзамену в Минюсте. Более 50% сдают с первого раза. Читайте отзывы юристов о программе и методике.",
     keywords:
       "отзывы о подготовке к экзамену в Минюсте, отзывы о курсе подготовки юристов к экзамену в Минюсте, курс подготовки к аттестационному экзамену, отзывы о подготовке к экзамену, отзывы участников, результаты подготовки юристов",
     ogImage: `${SITE_URL}/sections/testimonials.png`,
@@ -64,7 +64,7 @@ export const pageMetas: Record<string, PageMeta> = {
   author: {
     title: "Об авторе - Илья Латышев | Юрист, бизнес-коуч, автор программы",
     description:
-      "Илья Латышев - юрист с 2001 года, бизнес-коуч ICU, автор 300+ статей. С 2022 года веду группы подготовки к аттестационному экзамену в Минюсте. Более 50% участников сдают с первого раза.",
+      "Илья Латышев - юрист с 2001 года, бизнес-коуч ICU, автор 270+ статей. С 2022 года веду группы подготовки к аттестационному экзамену в Минюсте. Более 50% участников сдают с первого раза.",
     keywords:
       "илья латышев, автор курса, бизнес-коуч для юристов, преподаватель юристов",
     ogImage: `${SITE_URL}/author.jpg`,
@@ -85,10 +85,10 @@ export const pageMetas: Record<string, PageMeta> = {
   },
 
   notFound: {
-    title: "404 - Страница не найдена | Группа подготовки к экзамену в Минюсте",
+    title: "404 - Страница не найдена | Подготовка к экзамену в Минюсте",
     description:
       "Запрашиваемая страница не найдена. Вернитесь на главную страницу или перейдите к разделам о программе подготовки к экзамену в Минюсте.",
-    ogImage: `${SITE_URL}/sections/hero-groups-collage.png`,
+    ogImage: `${SITE_URL}/sections/details.png`,
     canonical: SITE_URL,
     type: "website",
   },
@@ -133,11 +133,7 @@ export const updatePageMeta = (meta: PageMeta) => {
   if (ogDescription) ogDescription.setAttribute("content", meta.description);
 
   const ogImage = document.querySelector('meta[property="og:image"]');
-  if (ogImage)
-    ogImage.setAttribute(
-      "content",
-      meta.ogImage || `${SITE_URL}/sections/hero-groups-collage.png`
-    );
+  if (ogImage) ogImage.setAttribute("content", meta.ogImage || `${SITE_URL}/sections/details.png`);
 
   const ogUrl = document.querySelector('meta[property="og:url"]');
   if (ogUrl) ogUrl.setAttribute("content", meta.canonical || SITE_URL);
@@ -153,11 +149,7 @@ export const updatePageMeta = (meta: PageMeta) => {
   if (twitterDescription) twitterDescription.setAttribute("content", meta.description);
 
   const twitterImage = document.querySelector('meta[name="twitter:image"]');
-  if (twitterImage)
-    twitterImage.setAttribute(
-      "content",
-      meta.ogImage || `${SITE_URL}/sections/hero-groups-collage.png`
-    );
+  if (twitterImage) twitterImage.setAttribute("content", meta.ogImage || `${SITE_URL}/sections/details.png`);
 
   const twitterUrl = document.querySelector('meta[name="twitter:url"]');
   if (twitterUrl) twitterUrl.setAttribute("content", meta.canonical || SITE_URL);

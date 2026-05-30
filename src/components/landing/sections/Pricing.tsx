@@ -7,6 +7,8 @@ import Text from "../ui/Text";
 import LandingButton from "../ui/LandingButton";
 import { AnimatedTabs } from "@/components/ui/animated-tabs";
 import SectionImage from "../ui/SectionImage";
+import { SITE_URL } from "@/content/landing";
+import { sanitizeAnchorHref } from "@/utils/safeUrl";
 
 interface PricingTier {
   label: string;
@@ -53,7 +55,7 @@ function PricingCard({
 }) {
   return (
     <div
-      className={`relative rounded-xl p-6 md:p-8 flex flex-col h-full card-hover-glow ${
+      className={`relative rounded-xl p-6 md:p-8 flex flex-col h-full card-hover-glow w-full max-w-md ${
         plan.highlighted
           ? "bg-card border-2 border-accent shadow-[var(--shadow-elevated)]"
           : "bg-card border border-border shadow-[var(--shadow-soft)]"
@@ -82,7 +84,7 @@ function PricingCard({
         <meta itemProp="priceCurrency" content="BYN" />
         <meta itemProp="price" content={tier.price.replace(/[^\d]/g, "")} />
         <meta itemProp="availability" content="https://schema.org/InStock" />
-        <link itemProp="url" href={tier.ctaHref} />
+        <link itemProp="url" href={sanitizeAnchorHref(tier.ctaHref, `${SITE_URL}/#pricing`)} />
         <div className="flex items-baseline justify-center gap-2">
           <span className="text-3xl font-bold text-foreground" itemProp="price">
             {tier.price}
@@ -162,7 +164,7 @@ function TopicCard({ topic }: { topic: TopicItem }) {
         <meta itemProp="priceCurrency" content="BYN" />
         <meta itemProp="price" content={topic.price.replace(/[^\d]/g, "")} />
         <meta itemProp="availability" content="https://schema.org/InStock" />
-        <link itemProp="url" href={topic.ctaHref} />
+        <link itemProp="url" href={sanitizeAnchorHref(topic.ctaHref, `${SITE_URL}/#pricing`)} />
         <span className="text-3xl font-bold text-foreground" itemProp="price">
           {topic.price}
         </span>
@@ -209,7 +211,7 @@ const Pricing = ({ headline, subheadline, plans, periodLabels, footnote, topics 
     label,
     content: (
       <>
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto items-stretch">
+        <div className="grid gap-6 max-w-5xl mx-auto items-stretch justify-items-center md:grid-cols-2">
           {plans.map((plan, i) => (
             <PricingCard key={i} plan={plan} tier={plan.tiers[periodIndex]} />
           ))}

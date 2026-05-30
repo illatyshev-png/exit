@@ -1,11 +1,12 @@
 import { useEffect } from "react";
-import { SITE_URL, faqContent } from "@/content/landing";
+import { SITE_URL, faqContent, pricingContent } from "@/content/landing";
 import {
   getOrganizationSchema,
-  getCourseSchema,
   getFAQSchema,
   getWebSiteSchema,
   getBreadcrumbSchema,
+  getPersonSchema,
+  getProductSchema,
 } from "@/utils/structuredData";
 
 /**
@@ -14,15 +15,17 @@ import {
  */
 const StructuredData = () => {
   useEffect(() => {
-    // Organization Schema
+    const authorName = "Илья Латышев";
+
+    // Organization Schema (как издатель/проект)
     const organizationSchema = getOrganizationSchema({
-      name: "Группа подготовки к экзамену в Минюсте",
+      name: "EXIT",
       description:
-        "Группа подготовки к аттестационному экзамену в Минюсте. Более 50% участников сдают с первого раза.",
+        "EXIT — пошаговый план побега из найма в свой бизнес.",
       logo: `${SITE_URL}/apple-touch-icon.png`,
       founder: {
-        name: "Илья Латышев",
-        jobTitle: "Бизнес-коуч, юрист",
+        name: authorName,
+        jobTitle: "Юрист, предприниматель",
         image: `${SITE_URL}/author.jpg`,
         url: "https://www.ilat.info",
       },
@@ -33,24 +36,31 @@ const StructuredData = () => {
       contactUrl: "https://t.me/IlyaLatyshev",
     });
 
-    // Course Schema
-    const courseSchema = getCourseSchema({
-      name: "Группа подготовки к экзамену в Министерстве юстиции",
+    // Person Schema
+    const personSchema = getPersonSchema({
+      name: authorName,
+      jobTitle: "Юрист, предприниматель",
       description:
-        "8-недельная программа подготовки к аттестационному экзамену в Минюсте. Включает полный конспект, 350+ тестовых вопросов, коучинговые техники.",
-      provider: "Илья Латышев",
-      duration: "P8W",
-      price: "900",
+        "Автор книги «EXIT: Пошаговый план побега из найма в свой бизнес».",
+      url: "https://www.ilat.info",
+      sameAs: ["https://t.me/IlyaLatyshev"],
+    });
+
+    // Product Schema (книга)
+    const productSchema = getProductSchema({
+      name: "EXIT: Пошаговый план побега из найма в свой бизнес",
+      description:
+        "Пошаговый план выхода из найма в свой бизнес от Ильи Латышева: клиенты без бюджета, партнёрство без судов, ценообразование без демпинга.",
+      image: `${SITE_URL}/images/book-mockup.png`,
+      price: pricingContent.plans?.[0]?.tiers?.[0]?.price?.replace(/[^\d]/g, "") || "35",
       currency: "BYN",
-      rating: {
-        value: "4.8",
-        count: "109",
-      },
-      instructor: {
-        name: "Илья Латышев",
-        description:
-          "Юрист с 2001 года, бизнес-коуч ICU, автор 300+ статей и курсов",
-      },
+      offers: pricingContent.plans.flatMap((plan) =>
+        plan.tiers.map((tier) => ({
+          price: tier.price.replace(/[^\d]/g, ""),
+          currency: "BYN",
+          availability: "https://schema.org/InStock",
+        })),
+      ),
     });
 
     // FAQPage Schema
@@ -58,12 +68,12 @@ const StructuredData = () => {
 
     // WebSite Schema
     const websiteSchema = getWebSiteSchema({
-      name: "Группа подготовки к экзамену в Минюсте",
+      name: "EXIT",
       url: SITE_URL,
       description:
-        "Группа подготовки к аттестационному экзамену в Минюсте. Более 50% участников сдают с первого раза.",
-      publisher: "Илья Латышев",
-      language: "ru-BY",
+        "Книга Ильи Латышева о том, как выйти из найма в свой бизнес и вырасти в чеке. 19 лет опыта, 130 страниц конкретики, 8 минут аудио-концентрата.",
+      publisher: authorName,
+      language: "ru",
     });
 
     // BreadcrumbList Schema
@@ -73,15 +83,11 @@ const StructuredData = () => {
         url: SITE_URL,
       },
       {
-        name: "Что входит",
-        url: `${SITE_URL}/#solution`,
+        name: "Аудио",
+        url: `${SITE_URL}/#audio`,
       },
       {
-        name: "Как работает",
-        url: `${SITE_URL}/#details`,
-      },
-      {
-        name: "Стоимость",
+        name: "Тарифы",
         url: `${SITE_URL}/#pricing`,
       },
     ]);
@@ -89,7 +95,8 @@ const StructuredData = () => {
     // Добавляем все схемы в head
     const schemas = [
       organizationSchema,
-      courseSchema,
+      personSchema,
+      productSchema,
       faqSchema,
       websiteSchema,
       breadcrumbSchema,

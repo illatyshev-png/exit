@@ -119,6 +119,10 @@ export interface FAQItem {
   answer: string;
 }
 
+/** Разворачивает markdown-ссылки в FAQ для поля text в JSON-LD */
+const faqAnswerForSchema = (answer: string) =>
+  answer.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g, "$1 ($2)");
+
 export const getFAQSchema = (items: FAQItem[]) => ({
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -127,7 +131,7 @@ export const getFAQSchema = (items: FAQItem[]) => ({
     name: item.question,
     acceptedAnswer: {
       "@type": "Answer",
-      text: item.answer,
+      text: faqAnswerForSchema(item.answer),
     },
   })),
 });

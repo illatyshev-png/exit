@@ -11,10 +11,13 @@ import ProductDetails from "../components/landing/sections/ProductDetails";
 import SocialProof from "../components/landing/sections/SocialProof";
 import Pricing from "../components/landing/sections/Pricing";
 import FAQ from "../components/landing/sections/FAQ";
+import AudioTestDrive from "../components/landing/sections/AudioTestDrive";
+import PersonalStory from "../components/landing/sections/PersonalStory";
+import InsideExit from "../components/landing/sections/InsideExit";
+import VIP from "../components/landing/sections/VIP";
 import RevealOnScroll from "../components/landing/ui/RevealOnScroll";
 import ScrollToTop from "../components/landing/ui/ScrollToTop";
 import StructuredData from "../components/StructuredData";
-import WelcomePopup from "../components/WelcomePopup";
 
 import {
   siteConfig,
@@ -29,6 +32,10 @@ import {
   pricingContent,
   faqContent,
   footerContent,
+  audioContent,
+  storyContent,
+  insideContent,
+  vipContent,
 } from "../content/landing";
 
 
@@ -61,24 +68,23 @@ const Index = () => {
           <StatsBar {...statsContent} />
         </RevealOnScroll>
         <RevealOnScroll>
-          <Comparison {...comparisonContent} />
+          <AudioTestDrive {...audioContent} />
+        </RevealOnScroll>
+        <RevealOnScroll>
+          <PersonalStory {...storyContent} />
+        </RevealOnScroll>
+        <RevealOnScroll>
+          <InsideExit {...insideContent} />
         </RevealOnScroll>
         <RevealOnScroll>
           <Solution {...solutionContent} />
-        </RevealOnScroll>
-        <RevealOnScroll>
-          <Authority {...authorityContent} />
-        </RevealOnScroll>
-        <RevealOnScroll>
-          <ProductDetails {...detailsContent} />
         </RevealOnScroll>
         <RevealOnScroll>
           <SocialProof
             {...testimonialsContent}
             headline={
               <>
-                Отзывы участников <del className="line-through">курса</del>{" "}
-                групп подготовки к экзамену в Минюсте
+                Что говорят те, кто уже «в деле»?
               </>
             }
           />
@@ -87,13 +93,15 @@ const Index = () => {
           <Pricing {...pricingContent} />
         </RevealOnScroll>
         <RevealOnScroll>
+          <VIP {...vipContent} />
+        </RevealOnScroll>
+        <RevealOnScroll>
           <FAQ {...faqContent} />
         </RevealOnScroll>
       </main>
 
       <Footer {...footerContent} />
       <ScrollToTop />
-      <WelcomePopup />
     </div>
   );
 };

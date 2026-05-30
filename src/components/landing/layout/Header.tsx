@@ -162,11 +162,11 @@ const Header = ({ siteName, logo, navLinks }: HeaderProps) => {
               className="hidden md:inline-flex"
               onClick={() => scrollTo("#pricing")}
             >
-              Присоединиться к группе
+              Хочу уйти из найма!
             </Button>
           ) : (
             <Button size="sm" className="hidden md:inline-flex" asChild>
-              <Link to="/#pricing">Присоединиться к группе</Link>
+              <Link to="/#pricing">Хочу уйти из найма!</Link>
             </Button>
           )}
 
@@ -231,12 +231,12 @@ const Header = ({ siteName, logo, navLinks }: HeaderProps) => {
 
                 {onMainPage ? (
                   <Button className="w-full" onClick={() => scrollTo("#pricing")}>
-                    Присоединиться к группе
+                    Хочу уйти из найма!
                   </Button>
                 ) : (
                   <Button className="w-full" asChild>
                     <Link to="/#pricing" onClick={() => setMobileOpen(false)}>
-                      Присоединиться к группе
+                      Хочу уйти из найма!
                     </Link>
                   </Button>
                 )}

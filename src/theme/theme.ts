@@ -5,26 +5,26 @@
 // ============================================
 
 export const theme = {
-  name: "Default",
+  name: "EXIT",
 
   colors: {
     // HSL values only (without hsl() wrapper)
-    // Main: blue (217), Secondary: orange (25)
-    primary: "217 91% 60%",
-    primaryForeground: "0 0% 100%",
-    accent: "25 95% 53%",
-    accentForeground: "0 0% 100%",
-    background: "217 25% 98%",
-    foreground: "220 25% 14%",
-    muted: "217 20% 96%",
-    mutedForeground: "220 10% 46%",
-    card: "0 0% 100%",
-    cardForeground: "220 25% 14%",
-    border: "217 20% 90%",
-    input: "217 20% 90%",
-    ring: "217 91% 60%",
-    secondary: "217 30% 94%",
-    secondaryForeground: "217 50% 20%",
+    // Main: black + yellow
+    primary: "48 100% 55%",
+    primaryForeground: "0 0% 8%",
+    accent: "48 100% 55%",
+    accentForeground: "0 0% 8%",
+    background: "0 0% 6%",
+    foreground: "0 0% 98%",
+    muted: "0 0% 12%",
+    mutedForeground: "0 0% 72%",
+    card: "0 0% 10%",
+    cardForeground: "0 0% 98%",
+    border: "0 0% 20%",
+    input: "0 0% 20%",
+    ring: "48 100% 55%",
+    secondary: "0 0% 14%",
+    secondaryForeground: "0 0% 98%",
     destructive: "0 72% 51%",
     destructiveForeground: "0 0% 100%",
   },

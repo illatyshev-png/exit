@@ -1,5 +1,6 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
 import { getExternalLinkRel } from "@/utils/linkRel";
+import { sanitizeAnchorHref } from "@/utils/safeUrl";
 
 interface LandingButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
@@ -32,14 +33,16 @@ const LandingButton = ({
   const classes = `inline-flex items-center justify-center rounded-lg transition-all duration-200 font-medium ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
 
   if (href) {
-    const isExternal = href.startsWith("http");
+    const safeHref = sanitizeAnchorHref(href, "#");
+    const isExternal =
+      safeHref.startsWith("http://") || safeHref.startsWith("https://");
     return (
       <a
-        href={href}
+        href={safeHref}
         className={classes}
         {...(isExternal && {
           target: "_blank",
-          rel: getExternalLinkRel(href),
+          rel: getExternalLinkRel(safeHref),
         })}
       >
         {children}

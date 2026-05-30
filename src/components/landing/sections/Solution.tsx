@@ -1,11 +1,11 @@
 import Container from "../ui/Container";
 import Section from "../ui/Section";
 import { getExternalLinkRel } from "@/utils/linkRel";
+import { sanitizeAnchorHref } from "@/utils/safeUrl";
 import Heading from "../ui/Heading";
 import Text from "../ui/Text";
 import LandingCard from "../ui/LandingCard";
 import LandingButton from "../ui/LandingButton";
-import SectionImage from "../ui/SectionImage";
 
 interface Benefit {
   title: string;
@@ -30,9 +30,7 @@ const Solution = ({ headline, description, benefits, ctaText, ctaHref, highlight
   <Section id="solution">
     <Container>
       <div className="max-w-3xl mx-auto md:text-center mb-12">
-        <SectionImage src="/sections/что получает.jpg" alt="Что получает каждый участник группы подготовки" className="hidden md:block mb-4" offsetPercent={16.67} />
         <div className="flex items-center gap-3 mb-4 md:block">
-          <img src="/sections/что получает.jpg" alt="Что получает каждый участник группы подготовки" className="w-14 h-14 rounded-lg object-cover shrink-0 md:hidden" />
           <Heading as="h2">{headline}</Heading>
         </div>
         <Text variant="lead">{description}</Text>
@@ -53,11 +51,16 @@ const Solution = ({ headline, description, benefits, ctaText, ctaHref, highlight
               <p className="font-medium text-foreground">{b.title}</p>
             </div>
             <p className="text-sm text-muted-foreground flex-1">{b.description}</p>
-            {b.linkText && b.linkHref && (
+            {b.linkText && b.linkHref && (() => {
+              const safe = sanitizeAnchorHref(b.linkHref, "#");
+              const openExternal =
+                safe.startsWith("http://") || safe.startsWith("https://");
+              return (
               <a
-                href={b.linkHref}
-                target="_blank"
-                rel={b.linkHref.startsWith("http") ? getExternalLinkRel(b.linkHref) : "noopener noreferrer"}
+                href={safe}
+                {...(openExternal
+                  ? { target: "_blank" as const, rel: getExternalLinkRel(safe) }
+                  : {})}
                 className="inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline mt-3"
               >
                 {b.linkText}
@@ -65,7 +68,8 @@ const Solution = ({ headline, description, benefits, ctaText, ctaHref, highlight
                   <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </a>
-            )}
+              );
+            })()}
           </div>
         ))}
       </div>

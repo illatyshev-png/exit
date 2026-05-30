@@ -72,17 +72,17 @@ function AnimatedStat({ item }: { item: StatItem }) {
 
   return (
     <div ref={ref} className="flex flex-col items-center px-4">
-      <span className={`${labelStyle} mb-1 ${item.sublabel ? "visible" : "invisible"}`}>
-        {item.sublabel || "\u00A0"}
-      </span>
       <span className="text-3xl font-extrabold tracking-tight text-accent sm:text-4xl md:text-5xl">
         {item.prefix}
         {count.toLocaleString("ru-RU")}
         {item.suffix}
       </span>
-      <span className={`${labelStyle} mt-1`}>
-        {item.label}
-      </span>
+      <div className="mt-2 leading-tight">
+        <div className={labelStyle}>{item.label}</div>
+        {item.sublabel ? (
+          <div className={`${labelStyle} mt-0.5`}>{item.sublabel}</div>
+        ) : null}
+      </div>
     </div>
   );
 }

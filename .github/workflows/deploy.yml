@@ -22,21 +22,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install Chromium for react-snap
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y chromium-browser || sudo apt-get install -y chromium
-        env:
-          DEBIAN_FRONTEND: noninteractive
-
       - name: Build
-        run: |
-          CHROMIUM=$(command -v chromium-browser || command -v chromium || command -v google-chrome)
-          echo "Using Chromium at: $CHROMIUM"
-          npm pkg set "reactSnap.puppeteerExecutablePath=$CHROMIUM"
-          npm run build
-        env:
-          PUPPETEER_EXECUTABLE_PATH: /usr/bin/chromium
+        run: npm run build
 
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6

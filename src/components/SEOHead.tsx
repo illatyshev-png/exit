@@ -13,10 +13,11 @@ interface SEOHeadProps {
  * Использовать на страницах, где нужно изменить title/description
  */
 const SEOHead = ({
-  title = "Группа подготовки к экзамену в Минюсте | более 50% сдают с 1 раза",
-  description = "Группа подготовки к аттестационному экзамену в Минюсте. Более 50% участников сдают с первого раза. 8 недель, 5–6 человек, отработанная методика.",
-  image = "https://exam.ilat.info/sections/hero-groups-collage.png",
-  url = "https://exam.ilat.info/",
+  title = "EXIT — план побега из найма в свой бизнес",
+  description =
+    "Книга Ильи Латышева о том, как выйти из найма в свой бизнес и вырасти в чеке. 19 лет опыта, 130 страниц конкретики, 8 минут аудио-концентрата.",
+  image = "https://exit.ilat.info/images/book-mockup.png",
+  url = "https://exit.ilat.info/",
   type = "website",
 }: SEOHeadProps) => {
   useEffect(() => {
