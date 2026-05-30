@@ -340,11 +340,10 @@ const PricingPage = () => {
             {/* CTA */}
             <div className="text-center bg-accent/5 border border-accent/20 rounded-lg p-8">
               <Heading as="h3" className="mb-4">
-                Готовы присоединиться к 21-й группе подготовки юристов?
+                Готовы присоединиться к 22-й группе подготовки юристов?
               </Heading>
               <Text className="mb-6">
-                Количество мест ограничено. Не упустите возможность подготовиться
-                к экзамену с проверенной методикой.
+                Стартуем в сентябре. Тем, кто забронирует место сейчас, будет старая цена. С сентября цена будет выше.
               </Text>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

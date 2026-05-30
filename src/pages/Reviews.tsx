@@ -145,11 +145,10 @@ const Reviews = () => {
 
             <div className="text-center bg-accent/5 border border-accent/20 rounded-lg p-8">
               <Heading as="h3" className="mb-4">
-                Присоединяйтесь к 21-й группе!
+                Присоединяйтесь к 22-й группе!
               </Heading>
               <Text className="mb-6">
-                Станьте частью успешного сообщества юристов, которые готовятся к
-                экзамену в Минюсте по проверенной методике.
+                Стартуем в сентябре. Тем, кто забронирует место сейчас, будет старая цена. С сентября цена будет выше.
               </Text>
               <LandingButton variant="accent" size="lg" href="/pricing">
                 Присоединиться к группе

@@ -103,7 +103,7 @@ export default function WelcomePopup({ onClose }: WelcomePopupProps) {
             Актуально
           </h2>
           <p className="font-medium text-foreground">
-            Принимаю заявки в 21-ю группу. Осталось 1 место. Стартуем в начале июня.
+            Принимаю заявки в 22-ю группу. Стартуем в сентябре. Тем, кто забронирует место сейчас, будет старая цена. С сентября цена будет выше.
           </p>
         </div>
         <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:justify-end">
