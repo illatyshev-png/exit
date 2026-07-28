@@ -97,20 +97,22 @@ const InsideExit = ({ headline, subheadline, text, gallery, pdfPreview }: Inside
 
             <div className="mt-6">
               {safePdfSrc ? (
-                <div className="overflow-hidden rounded-xl border border-border bg-background h-[70vh] min-h-[320px]">
-                  <object
-                    data={safePdfSrc}
-                    type="application/pdf"
+                <div className="overflow-hidden rounded-xl border border-border bg-background">
+                  <iframe
+                    src={safePdfSrc}
                     title="PDF-превью"
-                    className="block h-full w-full"
-                  >
-                    <div className="flex h-full flex-col items-center justify-center gap-4 p-6 text-center text-sm text-muted-foreground">
-                      <p>В этом браузере превью PDF недоступно.</p>
+                    className="block h-[70vh] min-h-[320px] w-full"
+                  />
+                  <div className="border-t border-border bg-card/60 px-4 py-3 text-center">
+                    <p className="text-sm text-muted-foreground">
+                      Если встроенное превью не загрузилось, откройте файл отдельно.
+                    </p>
+                    <div className="mt-3">
                       <LandingButton variant="outline" size="md" href={safePdfSrc}>
                         Открыть PDF
                       </LandingButton>
                     </div>
-                  </object>
+                  </div>
                 </div>
               ) : (
                 <div className="rounded-xl border-2 border-dashed border-border bg-muted/30 p-10 text-center">

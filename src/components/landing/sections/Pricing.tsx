@@ -86,17 +86,17 @@ function PricingCard({
         <meta itemProp="availability" content="https://schema.org/InStock" />
         <link itemProp="url" href={sanitizeAnchorHref(tier.ctaHref, `${SITE_URL}/#pricing`)} />
         <div className="flex items-baseline justify-center gap-2">
-          <span className="text-3xl font-bold text-foreground" itemProp="price">
-            {tier.price}
-          </span>
           {tier.oldPrice && (
             <span className="text-base text-muted-foreground line-through">
               {tier.oldPrice}
             </span>
           )}
+          <span className="text-3xl font-bold text-foreground" itemProp="price">
+            {tier.price}
+          </span>
         </div>
         {tier.note && (
-          <p className="text-xs text-muted-foreground mt-1">{tier.note}</p>
+          <p className="mt-2 text-sm font-semibold text-accent">{tier.note}</p>
         )}
         <p className="text-xs text-muted-foreground mt-1">{tier.label}</p>
       </div>
