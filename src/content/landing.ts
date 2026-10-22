@@ -281,9 +281,7 @@ export const pricingContent = {
       tiers: [
         {
           label: "Разовая покупка",
-          price: "25 BYN",
-          oldPrice: "35 BYN",
-          badge: "Скидка до 8 августа",
+          price: "35 BYN",
           ctaText: "Забрать книгу и консультацию",
           ctaHref: "https://api.bepaid.by/products/prd_ca1a2bcb32e02d90/pay",
         },
@@ -296,7 +294,7 @@ export const pricingContent = {
       features: [
         "Всё из «Основного»",
         "Все обновления книги, которые уже вышли с марта 2026",
-        "Upgrade-подписка на обновления по сентябрь 2026",
+        "Upgrade-подписка на обновления по ноябрь 2026",
       ],
       tiers: [
         {

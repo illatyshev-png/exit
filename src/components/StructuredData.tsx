@@ -52,7 +52,7 @@ const StructuredData = () => {
       description:
         "Пошаговый план выхода из найма в свой бизнес от Ильи Латышева: клиенты без бюджета, партнёрство без судов, ценообразование без демпинга.",
       image: `${SITE_URL}/images/book-mockup.png`,
-      price: pricingContent.plans?.[0]?.tiers?.[0]?.price?.replace(/[^\d]/g, "") || "25",
+      price: pricingContent.plans?.[0]?.tiers?.[0]?.price?.replace(/[^\d]/g, "") || "35",
       currency: "BYN",
       offers: pricingContent.plans.flatMap((plan) =>
         plan.tiers.map((tier) => ({
