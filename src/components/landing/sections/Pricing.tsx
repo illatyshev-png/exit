@@ -37,6 +37,18 @@ interface TopicItem {
   badge?: string;
 }
 
+function FeatureText({ text }: { text: string }) {
+  const marker = "только до 24 ноября";
+  const index = text.toLowerCase().indexOf(marker);
+  if (index === -1) return <>{text}</>;
+  return (
+    <>
+      {text.slice(0, index)}
+      <span className="font-semibold text-accent">{text.slice(index)}</span>
+    </>
+  );
+}
+
 interface PricingProps {
   headline: string;
   subheadline?: string;
@@ -120,7 +132,9 @@ function PricingCard({
                 d="M5 13l4 4L19 7"
               />
             </svg>
-            {feature}
+            <span>
+              <FeatureText text={feature} />
+            </span>
           </li>
         ))}
       </ul>

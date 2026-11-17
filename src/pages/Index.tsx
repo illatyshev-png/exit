@@ -56,6 +56,9 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <StructuredData />
+      <p className="bg-accent px-4 py-3 text-center text-sm font-bold leading-snug text-accent-foreground md:text-base">
+        Личная консультация по построению юрбизнеса по цене книги доступна только до 24 ноября.
+      </p>
       <Header
         siteName={siteConfig.name}
         logo={siteConfig.logo}

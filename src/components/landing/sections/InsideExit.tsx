@@ -9,6 +9,7 @@ interface InsideExitProps {
   headline: string;
   subheadline?: string;
   text: string;
+  notice?: string;
   gallery: {
     images?: string[];
     caption?: string;
@@ -22,7 +23,7 @@ interface InsideExitProps {
   };
 }
 
-const InsideExit = ({ headline, subheadline, text, gallery, pdfPreview }: InsideExitProps) => {
+const InsideExit = ({ headline, subheadline, text, notice, gallery, pdfPreview }: InsideExitProps) => {
   const rawPdfSrc = pdfPreview?.pdfSrc?.trim() ?? "";
   const safePdfSrc = rawPdfSrc && isSafePdfEmbedSrc(rawPdfSrc) ? rawPdfSrc : null;
   const pdfCtaHref = sanitizeAnchorHref(safePdfSrc || "#pricing", "#pricing");
@@ -44,6 +45,11 @@ const InsideExit = ({ headline, subheadline, text, gallery, pdfPreview }: Inside
       <Text variant="lead" className="text-center max-w-3xl mx-auto">
         {text}
       </Text>
+      {notice ? (
+        <p className="mt-6 mx-auto max-w-3xl rounded-xl bg-accent px-4 py-3 text-center text-sm font-bold leading-snug text-accent-foreground md:text-base">
+          {notice}
+        </p>
+      ) : null}
 
       {(gallery.images && gallery.images.length > 0) || gallery.showPlaceholders ? (
         <div className="mt-10">
